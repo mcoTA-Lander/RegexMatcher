@@ -1,9 +1,5 @@
 public class RegExMatcher {
 
-    public static void main(String[] args){
-
-    }
-
     public boolean isProperName(String name){
         return false;
     }

@@ -38,7 +38,7 @@ class RegExMatcherTest {
     @Test
     void isAncestor() {
         String[] personT = {"father","mother", "grandmother","grandfather","great-grandmother","great-great-grandfather"};
-        String[] personF = {"sister","brother","uncle", "nephew"};
+        String[] personF = {"sister","brother","uncle", "nephew","grand","great","greatgrand","great-grand","great-father", ""};
         for(String n : personT){
             assertTrue(rem.isAncestor(n));
         }
@@ -50,9 +50,13 @@ class RegExMatcherTest {
 
     @Test
     void isPalindrome() {
-        String[] palindrome = {"anna","raceCAR","BoB","kayak","asdfggfdsa"};
-        for(String n : palindrome){
+        String[] palindromeT = {"anna","raceCAR","BoB","kayak","asdfggfdsa"};
+        String[] palindromeF = {"", "annca","one",null, "ann ana"};
+        for(String n : palindromeT){
             assertTrue(rem.isPalindrome(n));
+        }
+        for(String n : palindromeF){
+            assertFalse(rem.isPalindrome(n));
         }
     }
 }
