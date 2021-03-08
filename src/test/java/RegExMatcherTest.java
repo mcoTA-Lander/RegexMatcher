@@ -37,6 +37,7 @@ class RegExMatcherTest {
 
     @Test
     void isAncestor() {
+        rem = new RegExMatcher();
         String[] personT = {"father","mother", "grandmother","grandfather","great-grandmother","great-great-grandfather"};
         String[] personF = {"sister","brother","uncle", "nephew","grand","great","greatgrand","great-grand","great-father", ""};
         for(String n : personT){
@@ -50,6 +51,7 @@ class RegExMatcherTest {
 
     @Test
     void isPalindrome() {
+        rem = new RegExMatcher();
         String[] palindromeT = {"anna","raceCAR","BoB","kayak","asdfggfdsa"};
         String[] palindromeF = {"", "annca","one",null, "ann ana"};
         for(String n : palindromeT){
